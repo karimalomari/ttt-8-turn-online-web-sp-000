@@ -6,5 +6,6 @@ def turn(board)
     turn (board)
   else
     move(board, index, current_player(board))
-    
+  end
+  
 end
