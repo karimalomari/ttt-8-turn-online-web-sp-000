@@ -22,8 +22,8 @@ def valid_move?(board, index)
 end
 
 
-def move(board, index, symbol)
-  board[index] = symbol
+def move (board, position, char="X")
+  board[position] = char
 end
 
 
