@@ -5,5 +5,5 @@ def turn(board)
   if !valid_move? (board, index)
     turn (board)
   else
-    move(board, index, current)
+    move(board, index, current_player)
 end
