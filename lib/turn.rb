@@ -6,7 +6,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def valid_move?
+
+def valid_move?(board, index)
+  index.between?(0,8) && !position_taken?(board, index)
+end
+
+
 def turn(board)
   puts "Please enter 1-9:"
   userInput = gets.strip
