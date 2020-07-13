@@ -13,4 +13,5 @@ end
 def valid move?(board, index)
   if board[index] == "X" || board[index] == "O"&& index.between?(0, 8)
     return false
+  end
 end
