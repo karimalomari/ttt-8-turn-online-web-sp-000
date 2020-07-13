@@ -1,3 +1,3 @@
 def turn(board)
-  puts ""
+  puts "Please enter 1-9"
 end
