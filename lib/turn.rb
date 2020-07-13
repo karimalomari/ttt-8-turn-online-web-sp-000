@@ -14,23 +14,15 @@ def move (board, position, char)
   board[index] = char
 end
 
-def position_taken? (board, index)
-  if board[index] == " " || board[index] == "" || board[index] == nil
-    return false
-  elsif board[index] == "X" || board[index] == "O"
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil # safety measures
+      taken = false
+    elsif board[index] == "X" || board[index] == "O"
       taken = true
   end
 end
 
 def valid_move?(board, index)
-  if board[index] == "X" || board[index] == "O"&& index.between?(0, 8)
-    return false 
-
-  elsif 
-    board[index] == " "||board[index] == ""|| board[index] == nil && index.between?(0, 8)
-    return true 
-
-  else 
-    return false
-  end
+  index.between?(0,8) && !position_taken?(board, index)
+   # if the position isnt taken and is on the board, move must be valid
 end
