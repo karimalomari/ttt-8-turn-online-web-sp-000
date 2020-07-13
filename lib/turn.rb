@@ -1,4 +1,6 @@
-
+def display_board
+  
+end
 
 def turn(board)
   puts "Please enter 1-9:"
